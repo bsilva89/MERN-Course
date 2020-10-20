@@ -5,7 +5,7 @@
   .formcontrol label,
   .formcontrol input,
   .formcontrol textarea {
-    display: block;
+    display: flex;
   }
   
   .formcontrol label {

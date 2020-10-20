@@ -1,5 +1,5 @@
 import classes from '../../../styles/NavLinks.module.css'
-import NavLink from '../../../shared/components/UIElements/NavLInk'
+import NavLink from '../../../shared/components/UIElements/NavLink'
 
 const NavLinks = props => {
     return (
