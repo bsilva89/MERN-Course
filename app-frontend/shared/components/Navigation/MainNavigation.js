@@ -20,13 +20,11 @@ const MainNavigation = (props) => {
 
     return (
     <React.Fragment>
-        {drawerIsOpen && 
         <SideDrawer clickToClose={closeDrawer} show={drawerIsOpen}> 
             <nav className={classes.mainnavigation__drawernav}>
                 <NavLinks/>
             </nav>
         </SideDrawer>
-        }
         <MainHeader>
             <button 
             className={classes.mainnavigation__menubtn}

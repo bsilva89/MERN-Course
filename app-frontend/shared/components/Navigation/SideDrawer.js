@@ -3,17 +3,25 @@ import Backdrop from '../UIElements/Backdrop';
 import { CSSTransition } from 'react-transition-group'
 
 const SideDrawer = (props) => (
-    <Backdrop clickToClose={props.clickToClose}>
+    <React.Fragment>
         <CSSTransition 
-        in={props.show} 
-        timeout={200} 
-        classNames='slide-in-left'
-        mountOnEnter
-        unmountOnExit
-        >
-            <aside className={classes.sidedrawer}>{props.children}</aside>
+            in={props.show} 
+            timeout={200} 
+            classNames={{
+                enter: classes.slideEnter,
+                enterActive: classes.slideEnterActive,
+                exit: classes.slideExit,
+                exitActive: classes.slideExitActive,
+            }}
+            mountOnEnter
+            unmountOnExit
+            >
+                <aside className={classes.sidedrawer}>
+                    {props.children}
+                </aside>
         </CSSTransition>
-    </Backdrop>
+        { props.show && <Backdrop clickToClose={props.clickToClose}/> }
+    </React.Fragment>
 );
 
 export default SideDrawer;

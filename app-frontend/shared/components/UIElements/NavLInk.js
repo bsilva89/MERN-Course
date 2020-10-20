@@ -5,7 +5,7 @@ const NavLink = (props) => {
     const router = useRouter()
 
     const style = {
-        color: router.pathname === props.href ? 'black' : 'gray'
+        color: router.pathname === props.href ? 'gray' : 'black'
     }
 
     return (

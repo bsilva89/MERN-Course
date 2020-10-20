@@ -2,7 +2,7 @@ import classes from '../../styles/UserList.module.css';
 import UserItem from './UserItem'
 
 const UserList = (props) => {
-    if (props.items.lenght == 0) {
+    if (Object.keys(props.items).length === 0) {
         return (
             <div className={classes.userslist}>
                 <h2>No users found.</h2>
