@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 const NavLink = (props) => {
     const router = useRouter()
-
+     
     const style = {
         color: router.pathname === props.href ? 'gray' : 'black'
     }
