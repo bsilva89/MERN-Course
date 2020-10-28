@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import MainNavigation from '../shared/components/Navigation/MainNavigation'
 import Head from 'next/head'
+import { AuthContext } from '../context/auth-context'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,9 +12,10 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <MainNavigation/>
-      <main>
-        <Component {...pageProps}/>
-      </main>
+        <main>
+          <Component {...pageProps}/>
+        </main>
+      
     </React.Fragment>
   )
 }
